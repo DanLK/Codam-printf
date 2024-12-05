@@ -6,7 +6,7 @@
 /*   By: dloustal <dloustal@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/21 09:49:57 by dloustal      #+#    #+#                 */
-/*   Updated: 2024/12/03 17:18:16 by dloustal      ########   odam.nl         */
+/*   Updated: 2024/12/05 14:45:49 by dloustal      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ static int	handle_arg(va_list args, const char *input)
 	else if (*input == 'u')
 		result = ft_printu((unsigned int)va_arg(args, unsigned int));
 	else if (*input == 'x')
-		result = ft_printx_lower((unsigned int)va_arg(args, unsigned int));
+		result = ft_printx((unsigned int)va_arg(args, unsigned int), 'x');
 	else if (*input == 'X')
-		result = ft_printx_upper((unsigned int)va_arg(args, unsigned int));
+		result = ft_printx((unsigned int)va_arg(args, unsigned int), 'X');
 	else if (*input == '%')
 		result = ft_print_percent();
 	return (result);
@@ -58,7 +58,7 @@ int	ft_printf(const char *format, ...)
 			count += handle_arg(args, ++format);
 		else
 		{
-			ft_putchar_fd(*format, 1);
+			ft_putchar_fd(*format, STDOUT_FILENO);
 			count++;
 		}
 		format++;

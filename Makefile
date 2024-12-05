@@ -5,8 +5,7 @@ SOURCES = ft_printf.c \
 		ft_printp.c \
 		ft_printd.c \
 		ft_printu.c \
-		ft_printx_lower.c \
-		ft_printx_upper.c \
+		ft_printx.c \
 		ft_print_percent.c
 OBJFILES = $(SOURCES:.c=.o)
 CFLAGS += -Wall -Werror -Wextra

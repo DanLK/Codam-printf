@@ -6,7 +6,7 @@
 /*   By: dloustal <dloustal@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/22 15:00:33 by dloustal      #+#    #+#                 */
-/*   Updated: 2024/12/03 16:51:05 by dloustal      ########   odam.nl         */
+/*   Updated: 2024/12/05 14:46:54 by dloustal      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include "libft/libft.h"
 # include <stdarg.h>
-# include <unistd.h>
 # include <stdbool.h>
 # include <stdint.h>
 
@@ -30,9 +29,7 @@ int	ft_printd(int x);
 
 int	ft_printu(unsigned int x);
 
-int	ft_printx_lower(unsigned int x);
-
-int	ft_printx_upper(unsigned int x);
+int	ft_printx(unsigned int x, char spec);
 
 int	ft_print_percent(void);
 

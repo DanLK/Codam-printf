@@ -6,7 +6,7 @@
 /*   By: dloustal <dloustal@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/22 14:06:39 by dloustal      #+#    #+#                 */
-/*   Updated: 2024/12/03 14:18:27 by dloustal      ########   odam.nl         */
+/*   Updated: 2024/12/05 14:46:08 by dloustal      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_printp(void	*ptr)
 
 	if (!ptr)
 	{
-		ft_putstr_fd("(nil)", 1);
+		ft_putstr_fd("(nil)", STDOUT_FILENO);
 		return (5);
 	}
 	address = (uintptr_t)ptr;
@@ -33,7 +33,7 @@ int	ft_printp(void	*ptr)
 	}
 	*--address_to_print = 'x';
 	*--address_to_print = '0';
-	ft_putstr_fd(address_to_print, 1);
+	ft_putstr_fd(address_to_print, STDOUT_FILENO);
 	return (ft_strlen(address_to_print));
 }
 

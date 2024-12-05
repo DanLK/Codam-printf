@@ -6,7 +6,7 @@
 /*   By: dloustal <dloustal@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/25 11:58:48 by dloustal      #+#    #+#                 */
-/*   Updated: 2024/11/27 15:00:12 by dloustal      ########   odam.nl         */
+/*   Updated: 2024/12/05 14:45:29 by dloustal      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	ft_printc(char c)
 {
-	ft_putchar_fd(c, 1);
+	ft_putchar_fd(c, STDOUT_FILENO);
 	return (1);
 }
