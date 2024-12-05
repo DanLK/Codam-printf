@@ -6,7 +6,7 @@
 /*   By: dloustal <dloustal@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/11/21 09:49:57 by dloustal      #+#    #+#                 */
-/*   Updated: 2024/12/05 14:45:49 by dloustal      ########   odam.nl         */
+/*   Updated: 2024/12/05 15:00:10 by dloustal      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ int	ft_printf(const char *format, ...)
 	count = 0;
 	while (*format)
 	{
+		if (*format == '%' && !*(format + 1))
+			return (-1);
 		if (*format == '%' && is_specifier(*(format + 1)))
 			count += handle_arg(args, ++format);
 		else
